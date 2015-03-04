@@ -1,0 +1,25 @@
+.logo {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.ellipsis {
+  width: 500px;
+}
+
+.replace-text {
+  width: 200px;
+  height: 200px;
+  background-position: 0 0;
+  background-size: cover;
+}
+
+#footer {
+  background-color: #999;
+}
+
+.img1 {
+  background-image: url("../images/img1.jpg");
+  width: 264px;
+  height: 355px;
+}

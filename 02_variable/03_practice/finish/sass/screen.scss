@@ -1,0 +1,36 @@
+$pink: #c6538c;
+$white: #fff;
+$black: #fff;
+$yellow: yellow;
+$mobile: 500px;
+
+$mainColor: $pink;
+$subColor: adjust_hue(saturate($mainColor, 30), 130);
+
+body{
+	background-color: $mainColor;
+}
+.box{	
+	display: block;
+	width: 400px;
+	padding: 30px;
+	border: 5px solid $white;
+	margin: 100px auto;
+	color: #fff;
+	font-size: 50px;
+	text-align: center;
+	text-decoration: none;
+	&:hover{
+		color: $mainColor;
+		background-color: $white;
+	}
+	@media screen and (max-width: 500px) {
+		width: 200px;
+		border-color: $subColor;
+		color: $subColor;
+		font-size: 30px;
+	}
+	.ie &{
+		color: $black;
+	}
+}

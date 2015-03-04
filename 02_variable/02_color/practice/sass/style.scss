@@ -1,0 +1,47 @@
+@import "compass/reset";
+
+$base: #2876b3;
+ul{
+	padding: 2px;
+}
+li{
+	float: left;
+	width: 220px;
+	height: 100px;
+	
+	margin: 2px;
+	color: #fff;
+	font-size: 24px;
+	&::after{
+		content: attr(title);
+		display: block;
+		padding: 10px;
+	}
+	&:nth-child(1){
+		background-color: $base;
+	}
+	&:nth-child(2){
+		
+	}
+	&:nth-child(3){
+
+	}
+	&:nth-child(4){
+		
+	}
+	&:nth-child(5){
+		
+	}
+	&:nth-child(6){
+		
+	}
+	&:nth-child(7){
+		
+	}
+	&:nth-child(8){
+		
+	}
+	&:nth-child(9){
+		
+	}
+}

@@ -1,0 +1,78 @@
+
+@import "compass/css3";
+@import "compass/typography";
+@import "compass/layout";
+@import "compass/utilities";
+
+
+$icons-spacing:20px;
+$icons-layout: smart; //smart, diagonal, horizontal
+$icons-sprite-dimensions: true;
+@import "icons/*.png";
+@include all-icons-sprites;
+//css3
+.radius{
+    @include border-radius(3px);
+}
+.opacity{
+    @include opacity(0.6);
+}
+.shadow{
+    @include box-shadow(1px 1px 3px #333);
+}
+.logo{
+	display: inline-block;
+	margin-right: 10px;
+}
+
+
+//Typography
+a.link-color{
+	@include link-colors(red, yellow);
+}
+a.link-unstyle{
+	@include unstyled-link;
+}
+.ellipsis{
+	width: 500px;
+	@include ellipsis();
+}
+.replace-text{
+	@include replace-text('img2.jpg');
+	width: 200px;
+	height: 200px;
+	background-position: 0 0;
+	background-size: cover;
+}
+.replace-text-with-dimensions{
+	@include replace-text-with-dimensions('img2.jpg');
+}
+
+// footer
+
+@include sticky-footer(50px);
+#footer{
+	background-color: #999;
+}
+
+//utilities
+.btn-light{
+	@include contrasted(#6ADCD9);
+}
+.btn-dark{
+	@include contrasted(#1B006E);
+}
+
+.img1{
+	background-image: image-url('img1.jpg');
+	width: image-width('img1.jpg');
+	height: image-height('img1.jpg');
+}
+
+.social{
+	a{
+		// width: 32px;
+		// height: 32px;
+		@include hide-text;
+	}
+}
