@@ -1,10 +1,54 @@
+// variable
+$btn-pad: 7px 15px; // padding fot button
+$pad-basic: 10px;
+$pad-m: 15px;
+$font-base: 13px;
+$font-s: 0.92307em;
+
+$box-width: 300px;
+
+$grey: #999;
 $black: #000;
 $white: #fff;
-$grey: #999;
-$grey-light: #f6f6f6;
-$green: #1abc9c;
-$transparent: transparent;
 
-$mainColor: $green;
 
-$pad: 15px;
+// mixin
+@mixin css3($key, $value) {
+  -webkit-#{key}: $value;
+  -moz-#{$key}: $value;
+  #{$key}: $value;
+}
+
+@mixin bg-color($color) {
+  background-color: rgba($color, 0.8);
+}
+
+// extend
+%btn-basic {
+  @include css3(border-radius, 4px);
+  padding: $btn-pad;
+  border: 1px solid;
+  text-transform: uppercase;
+  font-size: $font-s;
+  background-color: transparent;
+
+}
+
+%basic-box {
+  display: inline-block;
+  margin: $pad-basic;
+  border: 1px solid $grey;
+  @include css3(box-sizing, border-box);
+  img {
+    width: 100%;
+  }
+}
+
+%before {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
